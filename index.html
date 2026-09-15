@@ -2,22 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web Page</title>
-    <link rel="stylesheet" href="pres.css">
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Omar | Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <nav>
+        <a href="#" class="logo">O<span>.</span></a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <h1 class="hello">Hello, my name is omar</h1>
+    <main>
+        <section id="about">
+            <div class="info">
+                <small>HELLO, I'M OMAR</small>
+                <h1>Web <span>Developer</span></h1>
+                <p>I build clean and responsive websites using HTML, CSS and JavaScript.</p>
+                <a class="btn" href="#contact">Let's Talk</a>
+                <button id="theme">Dark Mode</button>
+            </div>
 
-    <p class="welcome">Welcome</p>
+            <div class="photo">
+                <img src="profile.jpg" alt="Omar">
+                <b>HTML • CSS • JS</b>
+            </div>
+        </section>
 
-    <button class="btn1" onclick="showMessage()">Click here</button>
-    <p class="message" id="message"></p>
+        <section id="work">
+            <h2>My Skills</h2>
+            <ul class="skills">
+                <li>HTML <strong>90%</strong></li>
+                <li>CSS <strong>85%</strong></li>
+                <li>JavaScript <strong>70%</strong></li>
+            </ul>
+        </section>
 
+        <form id="contact">
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="Your email" required>
+            <select>
+                <option>Website</option>
+                <option>Portfolio</option>
+            </select>
+            <textarea placeholder="Your message"></textarea>
+            <button>Send</button>
+        </form>
+    </main>
 
-    <script src="pres.js"></script>
-
+    <footer>© 2026 Omar • <a href="#">GitHub</a></footer>
+    <script src="script.js"></script>
 </body>
 </html>
