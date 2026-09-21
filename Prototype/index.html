@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PORTFOLIO</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INTERACTIVE BACKGROUND -->
+    <canvas id="gridCanvas"></canvas>
+
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+            PORTFOLIO<span>.</span>
+        </div>
+
+        <ul class="list">
+            <li>Home</li>
+            <li>Models</li>
+            <li>Shop</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+
+    </nav>
+
+
+    <!-- MAIN -->
+    <main class="layout">
+
+
+        <!-- LEFT -->
+        <section class="side left">
+
+            <p class="tag">
+                CREATIVE DESIGNER
+            </p>
+
+            <h1>
+                CREATE<br>
+                <span>MORE.</span>
+            </h1>
+
+            <p class="description">
+                I create modern digital experiences
+                with clean design, motion and creativity.
+            </p>
+
+            <div class="buttons">
+
+                <button class="btn primary">
+                    Explore
+                </button>
+
+                <button class="btn secondary">
+                    Contact
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- MIDDLE - 3D MODEL -->
+        <section class="middle">
+
+            <div id="modelContainer"></div>
+
+            <div class="model-loading" id="modelLoading">
+                LOADING 3D...
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT -->
+        <section class="side right">
+
+            <p class="number">
+                01 / 03
+            </p>
+
+            <h2>
+                DIGITAL<br>
+                <span>VISION</span>
+            </h2>
+
+            <p class="description">
+                Turning ideas into visual experiences
+                that feel simple, modern and unique.
+            </p>
+
+            <div class="buttons">
+
+                <button class="btn primary">
+                    View Work
+                </button>
+
+                <button class="btn secondary">
+                    About Me
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section class="skills-section">
+
+    <div class="skills-header">
+
+        <p class="tag">
+            MY EXPERTISE
+        </p>
+
+        <h2>
+            SKILLS<br>
+            <span>& TOOLS.</span>
+        </h2>
+
+        <p class="skills-intro">
+            Technologies and creative tools I use
+            to build modern digital experiences.
+        </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <!-- HTML -->
+        <div class="skill-card">
+
+            <div class="skill-number">
+                01
+            </div>
+
+            <div class="skill-icon">
+                &lt;/&gt;
+            </div>
+
+            <h3>
+                HTML
+            </h3>
+
+            <p>
+                Semantic and structured
+                web interfaces.
+            </p>
+
+            <div class="skill-line">
+                <span style="width: 90%;"></span>
+            </div>
+
+        </div>
+
+
+        <!-- CSS -->
+        <div class="skill-card">
+
+            <div class="skill-number">
+                02
+            </div>
+
+            <div class="skill-icon">
+                #
+            </div>
+
+            <h3>
+                CSS
+            </h3>
+
+            <p>
+                Responsive layouts,
+                animations and visual effects.
+            </p>
+
+            <div class="skill-line">
+                <span style="width: 88%;"></span>
+            </div>
+
+        </div>
+
+
+        <!-- JavaScript -->
+        <div class="skill-card">
+
+            <div class="skill-number">
+                03
+            </div>
+
+            <div class="skill-icon">
+                JS
+            </div>
+
+            <h3>
+                JAVASCRIPT
+            </h3>
+
+            <p>
+                Interactive experiences
+                and dynamic interfaces.
+            </p>
+
+            <div class="skill-line">
+                <span style="width: 82%;"></span>
+            </div>
+
+        </div>
+
+
+        <!-- Three.js -->
+        <div class="skill-card">
+
+            <div class="skill-number">
+                04
+            </div>
+
+            <div class="skill-icon">
+                3D
+            </div>
+
+            <h3>
+                THREE.JS
+            </h3>
+
+            <p>
+                Interactive 3D scenes,
+                models and animations.
+            </p>
+
+            <div class="skill-line">
+                <span style="width: 75%;"></span>
+            </div>
+
+        </div>
+
+
+        <!-- UI Design -->
+        <div class="skill-card">
+
+            <div class="skill-number">
+                05
+            </div>
+
+            <div class="skill-icon">
+                ✦
+            </div>
+
+            <h3>
+                UI DESIGN
+            </h3>
+
+            <p>
+                Clean interfaces with
+                modern visual systems.
+            </p>
+
+            <div class="skill-line">
+                <span style="width: 85%;"></span>
+            </div>
+
+        </div>
+
+
+        <!-- Motion -->
+        <div class="skill-card">
+
+            <div class="skill-number">
+                06
+            </div>
+
+            <div class="skill-icon">
+                ↗
+            </div>
+
+            <h3>
+                MOTION
+            </h3>
+
+            <p>
+                Smooth transitions,
+                interactions and motion.
+            </p>
+
+            <div class="skill-line">
+                <span style="width: 78%;"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- THREE.JS -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+        }
+    }
+    </script>
+
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
