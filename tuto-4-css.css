@@ -1,0 +1,17 @@
+p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.title {
+    text-align: center;
+    color: #333333;
+    background: #eeeeee;
+}
+
+.intro {
+    color: #0066cc;
+}

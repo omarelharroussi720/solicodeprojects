@@ -1,0 +1,11 @@
+.liste-liens {
+    padding-left: 20px;
+}
+
+.liste-liens li {
+    margin-bottom: 10px;
+}
+
+.liste-liens a {
+    color: #2673e8;
+}

@@ -1,0 +1,11 @@
+.title {
+    color: red;
+}
+
+h2, h3 {
+    color: blue;
+}
+
+.article-body p {
+    color: green;
+}
