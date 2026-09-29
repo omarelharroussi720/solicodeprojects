@@ -1,85 +1,53 @@
+let SecretNumber = Math.floor(Math.random() * 100) + 1;
+let att = 0;
 
-let students = [];
-let cities = new Set();
-let notes = new Map();
-
-function addStudent(name, age, note) {
-
-    let message = "";
-
-    if (age >= 18) {
-        message = "Majeur";
-    } else {
-        message = "Mineur";
-    }
-
-    let bonus = note + 1;
-
-    let finalNote = Math.min(bonus, 20);
-
-    let student = {
-        name: name,
-        age: age,
-        note: finalNote,
-        status: message
-    };
-
-    students.push(student);
-
-    cities.add("Casablanca");
-
-    notes.set(name, finalNote);
-
-    return student;
-}
+let GusseNumber = document.getElementById("gusse");
+let BtnSubmit = document.getElementById("btn-submit");
+let Message = document.getElementById("message");
+let AttemptMessage = document.getElementById("attempt");
+let BtnRestart = document.getElementById("restart");
 
 
-document.getElementById("btn").addEventListener("click", function () {
+BtnSubmit.addEventListener("click",() =>{
+    checkNumber();
+});
 
-    let name = document.getElementById("name").value;
-    let age = Number(document.getElementById("age").value);
-    let note = Number(document.getElementById("note").value);
+BtnRestart.addEventListener("click", () =>{
+      restart();
+});
+AttemptMessage.textContent = att;
 
-    name = name.toUpperCase();
+function checkNumber() {
+    let gusse = Number(GusseNumber.value);
 
-    if (name === "" || age <= 0 || note < 0 || note > 20) {
-
-        document.getElementById("result").innerHTML =
-            "Veuillez entrer des informations correctes.";
-
+    if (!gusse || gusse < 1 || gusse > 100) {
+        Message.textContent = "THE NUMBER IS INVALID";
+        Message.style.color = "red";
         return;
     }
 
+    att++;
+    AttemptMessage.textContent = att;
 
-    let student = addStudent(name, age, note);
-
-
-    let date = new Date();
-
-
-    document.getElementById("result").innerHTML = `
-        <h2>Résultat</h2>
-
-        <p>Nom : ${student.name}</p>
-        <p>Age : ${student.age}</p>
-        <p>Note : ${student.note}/20</p>
-        <p>Statut : ${student.status}</p>
-        <p>Date : ${date.toLocaleDateString()}</p>
-
-        <h3>Liste des étudiants</h3>
-    `;
+    if (gusse < SecretNumber) {
+        Message.textContent = "THE NUMBER IS HIGHER";
+        Message.style.color = "orange";
+    } 
+    else if (gusse > SecretNumber) {
+        Message.textContent = "THE NUMBER IS LOWER";
+        Message.style.color = "orange";
+    } 
+    else {
+        Message.textContent = "YOU WON! THE NUMBER WAS " + SecretNumber;
+        Message.style.color = "green";
+    }
+}
 
 
-    students.forEach(function (item) {
-
-        document.getElementById("result").innerHTML +=
-            `<p>${item.name} - ${item.note}/20</p>`;
-
-    });
-
-
-    console.log("Cities :", cities);
-
-    console.log("Notes :", notes);
-
-});
+function restart(){
+    att = 0;
+    AttemptMessage.textContent = ""
+    Message.textContent = "";
+    SecretNumber = Math.floor(Math.random() * 100) + 1;
+    GusseNumber.value = ""
+}
